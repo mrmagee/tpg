@@ -1,0 +1,38 @@
+Diff between TPG and base MLF 2.0.2
+        - move /backup/.DS_Store to base
+	- move /images/Horsemen-light.jpg to base
+	- move /images/pologrounds.jpg to base
+	- move /images/tpg_image.jpg to base
+	- move /includes/entry.inc.php to base
+	- move /includes/functions.inc.php to base
+	- move /includes/index.inc.php to base
+	- move /includes/thread.inc.php to base
+	- create /storage in base
+	- move /storage/example.gif to base
+	- move /storage/pologrounds.jpg to base
+	- move /storage/pologrounds_wide.jpg to base
+	- move /storage/tn_pologrounds.jpg to base
+	- move /storage/tpg_image.jpg to base
+	- move /templates/default/images/bg_top.png to base
+	- move /templates/default/images/bg_top_bgsblue.png to base
+	- move /templates/default/images/bg_top_gree_fade.png to base
+	- move /templates/default/images/favicon.ico to base
+	- move /templates/default/images/link.jpg to base
+	- move /templates/default/images/link_hover.jpg to base
+	- move /templates/default/images/reply.png to base
+	- move /templates/default/images/reply_new.png to base
+	- move /templates/default/images/thread.png to base
+	- move /templates/default/images/thread_new.png to base
+	- move /templates/default/images/thread_new_sticky.png to base
+	- move /templates/default/images/thread_sticky.png to base
+	- move /templates/default/subtemplates/coverpicture.tpl.inc to base
+	- move /templates/default/subtemplates/entry.tpl.inc to base
+	- move /templates/default/subtemplates/index.tpl.inc to base
+	- move /templates/default/subtemplates/index_table.tpl.inc to base
+	- move /templates/default/subtemplates/posting.tpl.inc to base
+	- move /templates/default/subtemplates/search.tpl.inc to base
+	- move /templates/default/main.tpl to base
+	- move /templates/default/style.css to base
+
+
+	
