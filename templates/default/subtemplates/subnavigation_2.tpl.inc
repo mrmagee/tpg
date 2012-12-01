@@ -20,17 +20,31 @@
 {/foreach}
 </select><noscript><div class="inline"><input class="kat" type="submit" value="&raquo;" title="{#go#}" /></div></noscript></div></form>{/if}
 {if $browse_array}
-{if $item_count > $items_per_page}&nbsp; {if $page > 1}<a href="index.php?mode={$mode}&amp;page={$page-1}{if $category}&amp;category={$category}{/if}"><img class="previous" src="templates/{$settings.template}/images/plain.png" alt="[&laquo;]" title="{#previous_page_link_title#}" width="6" height="11" /></a>{/if}
+{if $item_count > $items_per_page}&nbsp; 
+
+{* commented the following out to remove the "previous" arrow that shows up if you 
+   are on a page > 1. -JM 01-Dec-2012 *}
+
+{*{if $page > 1}<a href="index.php?mode={$mode}&amp;page={$page-1}{if $category}&amp;category={$category}{/if}"><img class="previous" src="templates/{$settings.template}/images/plain.png" alt="[&laquo;]" title="{#previous_page_link_title#}" width="6" height="11" /></a>{/if}*}
 <form action="index.php" method="get"><div class="inline">
 <input type="hidden" name="mode" value="{$mode}" />
 {if $order}<input type="hidden" name="order" value="{$order}" />{/if}
 {if $category}<input type="hidden" name="category" value="{$category}" />{/if}
-<select class="kat" size="1" name="page" onchange="this.form.submit();" title="{#page_title#}">
+<noscript><div class="inline"><input class="kat" type="submit" value="&raquo;" title="{#go#}" /></div></noscript>
+
+<input type="text" id="searchTerm" class="kat" size="1" name="page" title="{#page_title#}">
+
+{* This controlled filling out the drop down menu for the pages.  
+   Since we're removing it, screw it.  *}
+
+{*
 {section name=x loop=$browse_array}
 {if $browse_array[x]!=0}<option value="{$browse_array[x]}"{if $browse_array[x]==$page} selected="selected"{/if}>{$browse_array[x]}</option>{/if}
 {/section}
-</select><noscript><div class="inline"><input class="kat" type="submit" value="&raquo;" title="{#go#}" /></div></noscript>
+*}
+
+
 </div></form>
-{if $page < $page_count}<a href="index.php?mode={$mode}&amp;page={$page+1}{if $category}&amp;category={$category}{/if}"><img class="next" src="templates/{$settings.template}/images/plain.png" alt="[&raquo;]" title="{#next_page_link_title#}" width="6" height="11" /></a>{/if}
+{*{if $page < $page_count}<a href="index.php?mode={$mode}&amp;page={$page+1}{if $category}&amp;category={$category}{/if}"><img class="next" src="templates/{$settings.template}/images/plain.png" alt="[&raquo;]" title="{#next_page_link_title#}" width="6" height="11" /></a>{/if}*}
 {/if}
 {/if}
